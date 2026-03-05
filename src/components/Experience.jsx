@@ -28,7 +28,7 @@ const experiences = [
         role: 'Web Engineer',
         company: 'Style Theory',
         period: 'October 2018 – March 2020',
-        techStack: 'React, MobX, GraphQL, JavaScript',
+        techStack: 'React, MobX, GraphQL, JavaScript, Storybook',
         accent: 'bg-slate-400',
         companyColor: 'text-slate-600',
         bullets: [
@@ -40,7 +40,7 @@ const experiences = [
         role: 'Software Engineer',
         company: 'Xendit',
         period: 'November 2017 – September 2018',
-        techStack: 'Node.js, React, JavaScript, REST API',
+        techStack: 'Node.js, React, JavaScript, REST API, MySQL, Redis, RabbitMQ, AWS, MongoDB',
         accent: 'bg-slate-400',
         companyColor: 'text-slate-600',
         bullets: [

@@ -9,12 +9,12 @@ function Hero() {
                 <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10 text-gray-300 leading-relaxed">
                     Over 8 years of experience designing, building, and maintaining large-scale web
                     applications in the fintech, e-commerce, and retail industries. Proficient in React,
-                    TypeScript, Node.js, and Golang. Currently open to remote opportunities as a developer
+                    TypeScript, Node.js, and Golang. Currently open to opportunities as a developer
                     at international companies.
                 </p>
                 <div className="flex flex-wrap justify-center gap-4">
                     <a
-                        href="mailto:adnin.rais31@gmail.com"
+                        href="https://mail.google.com/mail/?view=cm&to=adnin.rais31@gmail.com"
                         className="bg-indigo-600 hover:bg-indigo-500 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg"
                     >
                         <i className="fas fa-envelope mr-2"></i>Contact Me
@@ -34,6 +34,14 @@ function Hero() {
                         className="bg-gray-800 hover:bg-gray-700 text-white px-8 py-3 rounded-full font-semibold transition border-2 border-gray-800"
                     >
                         <i className="fab fa-github mr-2"></i>GitHub
+                    </a>
+                    <a
+                        href="https://wa.me/6285715162024"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="bg-green-600 hover:bg-green-500 text-white px-8 py-3 rounded-full font-semibold transition shadow-lg"
+                    >
+                        <i className="fab fa-whatsapp mr-2"></i>WhatsApp
                     </a>
                 </div>
             </div>
