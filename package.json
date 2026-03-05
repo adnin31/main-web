@@ -2,7 +2,7 @@
   "name": "main-web",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://adnin31.github.io/main-web",
+  "homepage": "https://arraidev.site",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
