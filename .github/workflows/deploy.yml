@@ -35,4 +35,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          cname: yourdomain.com   # replace with your Hostinger domain
+          # cname: yourdomain.com   # uncomment and set your real domain when ready
