@@ -3,14 +3,16 @@ import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Footer from './components/Footer';
+import Dock from './components/Dock';
 
 function App() {
   return (
-    <div className="bg-gray-50 font-sans leading-normal tracking-normal text-gray-800">
+    <div className="bg-ink-950 font-sans text-zinc-200 leading-normal min-h-screen">
       <Hero />
       <Skills />
       <Experience />
       <Footer />
+      <Dock />
     </div>
   );
 }

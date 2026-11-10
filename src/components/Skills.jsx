@@ -1,51 +1,83 @@
-const Tag = ({ children }) => (
-    <span className="bg-slate-100 text-slate-700 px-4 py-1.5 rounded-md text-sm font-semibold">
-        {children}
-    </span>
-);
+import { Chip, Reveal, SectionTitle } from './ui';
 
-const SkillCard = ({ icon, iconBg, iconColor, title, tags }) => (
-    <div className="bg-white rounded-xl p-8 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.1)] border border-gray-100 hover:-translate-y-1 transition duration-300">
-        <div className={`w-12 h-12 ${iconBg} rounded-lg flex items-center justify-center ${iconColor} mb-6 text-2xl`}>
-            <i className={icon}></i>
-        </div>
-        <h4 className="text-xl font-bold mb-4">{title}</h4>
-        <div className="flex flex-wrap gap-2">
-            {tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}
-        </div>
-    </div>
-);
+const groups = [
+    {
+        icon: 'fas fa-laptop-code',
+        label: 'Frontend',
+        title: 'Interfaces that scale',
+        desc: 'Component-driven UIs for customer-facing products and internal dashboards.',
+        tags: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'Angular', 'Vue 3', 'Redux', 'Tailwind CSS'],
+    },
+    {
+        icon: 'fas fa-server',
+        label: 'Backend',
+        title: 'Reliable services',
+        desc: 'Payment APIs, enterprise backends, and microservices built with Clean Architecture.',
+        tags: ['Node.js', 'Express.js', 'NestJS', 'Golang', 'Laravel', 'TypeScript'],
+    },
+    {
+        icon: 'fas fa-database',
+        label: 'Database',
+        title: 'Data that holds up',
+        desc: 'Relational and document stores for transactional and operational workloads.',
+        tags: ['PostgreSQL', 'MySQL', 'MongoDB'],
+    },
+    {
+        icon: 'fas fa-plug',
+        label: 'APIs & Integration',
+        title: 'Connected systems',
+        desc: 'Bank, payment, and third-party integrations with message queues where it counts.',
+        tags: ['REST', 'GraphQL', 'RabbitMQ', 'WhatsApp API', 'Intercom'],
+    },
+    {
+        icon: 'fas fa-cloud',
+        label: 'DevOps & Cloud',
+        title: 'Ship & test with confidence',
+        desc: 'Containerized deployments, CI/CD pipelines, and automated testing.',
+        tags: ['Docker', 'Git', 'CI/CD', 'Jest', 'Selenium', 'Vercel', 'AWS', 'GCP', 'Firebase'],
+    },
+    {
+        icon: 'fas fa-cubes',
+        label: 'Power Platform',
+        title: 'Low-code for enterprise',
+        desc: 'Business apps and automated workflows for manufacturing teams, plus corporate training.',
+        tags: ['Power Apps', 'Power Automate', 'Dataverse', 'SharePoint', 'Teams'],
+    },
+];
 
 function Skills() {
     return (
-        <section className="py-20 bg-white" id="skills">
-            <div className="container mx-auto px-6">
-                <h3 className="text-3xl font-bold text-center mb-12 relative pb-4">
-                    Technical Skills
-                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-20 h-1 bg-indigo-600 rounded"></span>
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <SkillCard
-                        icon="fas fa-laptop-code"
-                        iconBg="bg-blue-100"
-                        iconColor="text-blue-600"
-                        title="Frontend"
-                        tags={['React.js', 'Next.js', 'TypeScript', 'Angular', 'Tailwind CSS', 'Redux']}
-                    />
-                    <SkillCard
-                        icon="fas fa-server"
-                        iconBg="bg-green-100"
-                        iconColor="text-green-600"
-                        title="Backend"
-                        tags={['Node.js', 'Golang', 'Nest.js', 'Express.js', 'GraphQL', 'REST API']}
-                    />
-                    <SkillCard
-                        icon="fas fa-database"
-                        iconBg="bg-purple-100"
-                        iconColor="text-purple-600"
-                        title="Database & Cloud"
-                        tags={['PostgreSQL', 'MongoDB', 'MySQL', 'AWS', 'GCP', 'Docker']}
-                    />
+        <section id="skills" className="relative py-28 border-t border-white/5">
+            <div className="absolute inset-x-0 top-0 h-[400px] bg-gradient-to-b from-amber-500/[0.06] to-transparent pointer-events-none" />
+            <div className="relative container mx-auto px-6 max-w-6xl">
+                <SectionTitle
+                    center
+                    eyebrow="Technical Skills"
+                    title="What I Work"
+                    accent="With"
+                    subtitle="A full-stack toolkit refined over 8+ years of shipping production software — from fintech to the factory floor."
+                />
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {groups.map((g) => (
+                        <Reveal
+                            key={g.label}
+                            className="group rounded-2xl border border-white/10 bg-ink-900 p-7 hover:border-amber-400/40 hover:-translate-y-1 transition duration-300"
+                        >
+                            <div className="flex items-center justify-between mb-8">
+                                <div className="w-11 h-11 rounded-lg bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400">
+                                    <i className={g.icon} />
+                                </div>
+                                <span className="font-mono text-[11px] text-amber-300 border border-amber-400/30 bg-amber-400/5 px-2.5 py-1 rounded-md">
+                                    {g.label}
+                                </span>
+                            </div>
+                            <h3 className="font-display font-bold text-xl text-white">{g.title}</h3>
+                            <p className="text-sm text-zinc-400 leading-relaxed mt-3 mb-6">{g.desc}</p>
+                            <div className="flex flex-wrap gap-2">
+                                {g.tags.map((t) => <Chip key={t}>{t}</Chip>)}
+                            </div>
+                        </Reveal>
+                    ))}
                 </div>
             </div>
         </section>

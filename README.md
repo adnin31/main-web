@@ -1,70 +1,123 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img src="public/arrai_logo.png" alt="Adnin Rais" width="96" />
 
-## Available Scripts
+# Adnin Rais
 
-In the project directory, you can run:
+### Senior Full-Stack Software Engineer
 
-### `npm start`
+**8 years shipping production software across fintech, e-commerce, healthcare, and enterprise.**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[![Website](https://img.shields.io/badge/arraidev.site-f59e0b?style=for-the-badge&logo=googlechrome&logoColor=black)](https://arraidev.site)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adnin-rais-2976b811a/)
+[![Email](https://img.shields.io/badge/Email-18181b?style=for-the-badge&logo=gmail&logoColor=white)](mailto:adnin.rais31@gmail.com)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/6285715162024)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🟢 **Open to full-stack roles at international companies**
 
-### `npm test`
+</div>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 👋 Why work with me
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+I build software that runs real payments, real hospitals, and real factory floors — and I build it to last.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- 💳 **Payments & fintech**: 3D Secure integration with Bank Mandiri, a Wallet-as-a-Service platform for merchants, QRIS Tap payments on **MRT Jakarta**, and the Alfamart and BNI integrations at **Xendit**.
+- 🏥 **Mission-critical healthcare**: calendar, queue management, and front-office systems for **Siloam Hospitals**.
+- 🛒 **Commerce & ERP from scratch**: custom ERP, POS, and an e-commerce platform with an algorithmic skin recommendation engine at **Base Indonesia**.
+- 🏭 **Enterprise low-code**: Power Apps solutions and corporate training for **Toyota** and **Michelin**.
+- ⚡ **Performance-minded**: cut test execution time by **50%** by migrating from Jasmine to Jest and testing only modified code paths.
+- 🧱 **Clean Architecture advocate**: I keep codebases scalable and maintainable long after launch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📊 At a glance
 
-### `npm run eject`
+| 8+ years | 7 companies | 50% faster tests | Shipping since 2017 |
+| :---: | :---: | :---: | :---: |
+| Full-stack experience | Fintech → healthcare → enterprise | Jasmine → Jest migration | From Xendit to Finnet |
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🧰 Tech stack
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+| Area | Tools |
+| --- | --- |
+| **Frontend** | React, Next.js, Angular, Vue 3, TypeScript, JavaScript, Redux, MobX, Tailwind CSS |
+| **Backend** | Node.js, Express.js, NestJS, Golang, Laravel |
+| **Database** | PostgreSQL, MySQL, MongoDB |
+| **APIs & Integration** | REST, GraphQL, RabbitMQ, WhatsApp API, Intercom |
+| **DevOps & Testing** | Docker, Git, CI/CD, Jest, Selenium, Mocha, Webpack |
+| **Cloud** | Vercel, AWS, GCP, Firebase |
+| **Power Platform** | Power Apps, Power Automate, Dataverse, SharePoint, Teams |
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💼 Career
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Period | Role | Company |
+| --- | --- | --- |
+| Apr 2026 – Present | Fullstack Engineer | **Finnet Indonesia** |
+| Jul 2025 – Apr 2026 | Senior Fullstack Engineer | **Siloam Hospital** |
+| Jul 2025 – Feb 2026 | Power Apps Developer & Corporate Trainer (Freelance) | **Toyota** |
+| Jan 2025 – Jul 2026 | Power Apps Developer (Freelance) | **Michelin** |
+| Apr 2020 – Jul 2025 | Senior Fullstack Engineer | **Base Indonesia** |
+| Oct 2018 – Mar 2020 | Frontend Developer | **Style Theory** |
+| Nov 2017 – Sep 2018 | Software Engineer | **Xendit** |
 
-## Learn More
+👉 Full details on **[arraidev.site](https://arraidev.site)**.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🖥️ About this repository
 
-### Code Splitting
+This is the source code for my personal portfolio at **[arraidev.site](https://arraidev.site)**: a dark, single-page site with an amber accent.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+**Features**
+- Bold hero section with a profile card and key stats
+- Scroll-reveal animations that respect `prefers-reduced-motion`
+- Floating dock navigation that highlights the active section
+- Career timeline and skill cards
+- Responsive from mobile to desktop
 
-### Analyzing the Bundle Size
+**Built with**: React 18, Tailwind CSS, Font Awesome, and Google Fonts (Unbounded, Inter, JetBrains Mono).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Run locally
 
-### Making a Progressive Web App
+```bash
+git clone https://github.com/adnin31/main-web.git
+cd main-web
+npm install
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Then open [http://localhost:3000](http://localhost:3000).
 
-### Advanced Configuration
+### Build for production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```bash
+npm run build
+```
 
-### Deployment
+The optimized output is written to `build/`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Project structure
 
-### `npm run build` fails to minify
+```
+src/
+├── App.js               # Page layout
+├── index.css            # Global styles, grid texture, animations
+└── components/
+    ├── Hero.jsx         # Name, intro, CTAs, profile card
+    ├── Skills.jsx       # Skill cards
+    ├── Experience.jsx   # Career timeline
+    ├── Footer.jsx       # Contact section
+    ├── Dock.jsx         # Floating bottom navigation
+    └── ui.jsx           # Shared bits: Reveal, Chip, SectionTitle
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+To update your own content, edit the data arrays at the top of `Skills.jsx` and `Experience.jsx`.
+
+---
+
+<div align="center">
+
+**Let's build something great.**
+📧 [adnin.rais31@gmail.com](mailto:adnin.rais31@gmail.com) · 💼 [LinkedIn](https://www.linkedin.com/in/adnin-rais-2976b811a/) · 🐙 [GitHub](https://github.com/adnin31)
+
+</div>
