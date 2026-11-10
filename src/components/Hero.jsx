@@ -55,7 +55,7 @@ function Hero() {
                                 href="https://mail.google.com/mail/?view=cm&to=adnin.rais31@gmail.com"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-black px-7 py-3 rounded-full font-semibold transition shadow-[0_0_40px_-8px_rgba(251,191,36,0.6)]"
+                                className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-black px-7 py-3 rounded-full font-semibold transition shadow-[0_0_40px_-8px_rgba(251,191,36,0.6)]"
                             >
                                 Hire Me <i className="fas fa-arrow-right text-sm" />
                             </a>

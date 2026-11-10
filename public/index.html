@@ -28,6 +28,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Unbounded:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    // Apply saved/system theme before first paint to avoid a flash
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.classList.toggle('light', t === 'light');
+    })();
+  </script>
+  <script>
+    var v = function (name) { return 'rgb(var(--' + name + ') / <alpha-value>)'; };
     tailwind.config = {
       theme: {
         extend: {
@@ -37,8 +47,15 @@
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            ink: { 950: '#0a0a0b', 900: '#111113', 800: '#18181b', 700: '#232327' },
-            amber: { 400: '#fbbf24', 500: '#f59e0b' },
+            // Theme-aware tokens (values live in src/index.css)
+            white: v('fg'),
+            ink: { 950: v('ink-950'), 900: v('ink-900'), 800: v('ink-800'), 700: v('ink-700') },
+            zinc: { 100: v('zinc-100'), 200: v('zinc-200'), 300: v('zinc-300'), 400: v('zinc-400'), 500: v('zinc-500'), 600: v('zinc-600') },
+            amber: { 100: v('amber-100'), 300: v('amber-300'), 400: v('amber-400'), 500: '#f59e0b' },
+            green: { 400: v('green-400'), 500: '#22c55e' },
+            sky: { 300: v('sky-300'), 400: v('sky-400') },
+            // Fixed brand color for filled buttons (same in both themes)
+            brand: { DEFAULT: '#fbbf24', hover: '#fcd34d' },
           },
         },
       },

@@ -19,7 +19,7 @@ function Footer() {
                             href="https://mail.google.com/mail/?view=cm&to=adnin.rais31@gmail.com"
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-black px-7 py-3 rounded-full font-semibold transition"
+                            className="inline-flex items-center gap-2 bg-brand hover:bg-brand-hover text-black px-7 py-3 rounded-full font-semibold transition"
                         >
                             <i className="fas fa-envelope" /> adnin.rais31@gmail.com
                         </a>

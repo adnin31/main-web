@@ -9,6 +9,56 @@ const items = [
     { id: 'linkedin', icon: 'fab fa-linkedin-in', label: 'LinkedIn', href: 'https://www.linkedin.com/in/adnin-rais-2976b811a/', external: true },
 ];
 
+function getInitialTheme() {
+    return document.documentElement.classList.contains('light') ? 'light' : 'dark';
+}
+
+function ThemeToggle() {
+    const [theme, setTheme] = useState(getInitialTheme);
+    const isLight = theme === 'light';
+
+    useEffect(() => {
+        document.documentElement.classList.toggle('light', isLight);
+        const meta = document.querySelector('meta[name="theme-color"]');
+        if (meta) meta.setAttribute('content', isLight ? '#faf8f4' : '#0a0a0b');
+    }, [isLight]);
+
+    // Follow the OS setting until the visitor picks a theme themselves
+    useEffect(() => {
+        const mq = window.matchMedia('(prefers-color-scheme: light)');
+        const onChange = (e) => {
+            let saved = null;
+            try { saved = localStorage.getItem('theme'); } catch (err) { /* storage unavailable */ }
+            if (!saved) setTheme(e.matches ? 'light' : 'dark');
+        };
+        mq.addEventListener('change', onChange);
+        return () => mq.removeEventListener('change', onChange);
+    }, []);
+
+    const toggle = () => {
+        const next = isLight ? 'dark' : 'light';
+        setTheme(next);
+        try { localStorage.setItem('theme', next); } catch (err) { /* storage unavailable */ }
+    };
+
+    const label = isLight ? 'Switch to night mode' : 'Switch to day mode';
+
+    return (
+        <button
+            type="button"
+            onClick={toggle}
+            aria-label={label}
+            title={label}
+            className="group relative w-10 h-10 sm:w-11 sm:h-11 rounded-full flex items-center justify-center border border-white/10 text-amber-400 hover:border-amber-400/60 hover:-translate-y-1 transition"
+        >
+            <i className={`fas ${isLight ? 'fa-moon' : 'fa-sun'} text-sm`} />
+            <span className="pointer-events-none absolute -top-9 font-mono text-[11px] text-white bg-ink-800 border border-white/10 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">
+                {isLight ? 'Night' : 'Day'}
+            </span>
+        </button>
+    );
+}
+
 function Dock() {
     const [active, setActive] = useState('home');
 
@@ -29,7 +79,7 @@ function Dock() {
     return (
         <nav
             aria-label="Main"
-            className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 sm:gap-1.5 rounded-2xl border border-white/10 bg-ink-900/80 backdrop-blur-xl px-2 py-2 shadow-[0_10px_40px_rgba(0,0,0,0.6)]"
+            className="fixed bottom-5 left-1/2 -translate-x-1/2 z-50 flex items-center gap-1 sm:gap-1.5 rounded-2xl border border-white/10 bg-ink-900/80 backdrop-blur-xl px-2 py-2 shadow-[0_10px_40px_var(--dock-shadow)]"
         >
             {items.map((item, idx) => {
                 const isActive = active === item.id;
@@ -56,6 +106,8 @@ function Dock() {
                     </div>
                 );
             })}
+            <span className="w-px h-6 bg-white/10 mx-1" />
+            <ThemeToggle />
         </nav>
     );
 }

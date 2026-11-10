@@ -3,10 +3,58 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Theme tokens (space-separated RGB so Tailwind opacity modifiers work) */
+:root {
+    color-scheme: dark;
+    --fg: 255 255 255;
+    --ink-950: 10 10 11;
+    --ink-900: 17 17 19;
+    --ink-800: 24 24 27;
+    --ink-700: 35 35 39;
+    --zinc-100: 244 244 245;
+    --zinc-200: 228 228 231;
+    --zinc-300: 212 212 216;
+    --zinc-400: 161 161 170;
+    --zinc-500: 113 113 122;
+    --zinc-600: 82 82 91;
+    --amber-100: 254 243 199;
+    --amber-300: 252 211 77;
+    --amber-400: 251 191 36;
+    --green-400: 74 222 128;
+    --sky-300: 125 211 252;
+    --sky-400: 56 189 248;
+    --grid-line: rgba(255, 255, 255, 0.035);
+    --dock-shadow: rgba(0, 0, 0, 0.6);
+}
+
+:root.light {
+    color-scheme: light;
+    --fg: 24 24 27;
+    --ink-950: 250 248 244;
+    --ink-900: 255 255 255;
+    --ink-800: 245 241 234;
+    --ink-700: 233 228 220;
+    --zinc-100: 24 24 27;
+    --zinc-200: 39 39 42;
+    --zinc-300: 63 63 70;
+    --zinc-400: 82 82 91;
+    --zinc-500: 113 113 122;
+    --zinc-600: 161 161 170;
+    --amber-100: 120 53 15;
+    --amber-300: 180 83 9;
+    --amber-400: 180 83 9;
+    --green-400: 21 128 61;
+    --sky-300: 3 105 161;
+    --sky-400: 2 132 199;
+    --grid-line: rgba(24, 24, 27, 0.05);
+    --dock-shadow: rgba(120, 80, 20, 0.15);
+}
+
 body {
     margin: 0;
-    background: #0a0a0b;
-    color: #e4e4e7;
+    background: rgb(var(--ink-950));
+    color: rgb(var(--zinc-200));
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -19,8 +67,8 @@ body {
 /* Subtle grid texture */
 .bg-grid {
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+        linear-gradient(var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 56px 56px;
     mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
     -webkit-mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
